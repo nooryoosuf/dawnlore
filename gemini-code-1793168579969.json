@@ -1,0 +1,961 @@
+{
+  "metadata": {
+    "project_title": "Land of Dawn Lore Archive - Core Moniyan & Abyssal Conflict",
+    "schema_version": "1.0.0",
+    "research_date": "2026-10-28",
+    "canon_policy": "Strict adherence to official Moonton Hero Biographies, Imperial Annals, and in-game Masteries. Non-chronological dates are represented relatively without speculative year fabrication.",
+    "research_notes": "All five stories share documented direct connections through the Moniyan Imperial court, the Abyssal Incursion, and the regional politics of Castle Aberleen."
+  },
+  "stories": [
+    {
+      "story_id": "story_moniyan_001",
+      "title": "The Prince of Darkness and the Lost Heir",
+      "subtitle": "The fall of Aurelius II and the vow of the Imperial Princess",
+      "url_slug": "prince-of-darkness-and-lost-heir",
+      "story_type": "lore_arc",
+      "recommended_reading_order": 1,
+      "introduction": "Within the gilded marble halls of the Moniyan Empire, joy turned to ruin in a single night. The disappearance of Prince Aurelius II fractured the imperial dynasty, setting the stage for a child raised in darkness to return as the kingdom's greatest executioner.",
+      "word_count": 1120,
+      "related_hero_ids": ["hero_silvanna", "hero_dyrroth", "hero_thamuz", "hero_alice"],
+      "related_region_ids": ["region_moniyan_empire", "region_abyss"],
+      "related_faction_ids": ["faction_moniyan_empire", "faction_abyss", "faction_lightborn"],
+      "source_ids": ["src_official_dyrroth_bio", "src_official_silvanna_bio", "src_official_moniyan_annals"],
+      "conclusion": "The abduction severed the Moniyan line of succession and birthed the Son of the Abyss, transforming family grief into a continent-spanning holy war."
+    },
+    {
+      "story_id": "story_moniyan_002",
+      "title": "The Siege of the Imperial Sanctuary",
+      "subtitle": "Bloodlines collide beneath the Light of the Lord",
+      "url_slug": "siege-of-the-imperial-sanctuary",
+      "story_type": "lore_arc",
+      "recommended_reading_order": 4,
+      "introduction": "When the abyssal horns sounded against the ramparts of the Moniyan capital, Princess Silvanna stood alone between the legions of destruction and the holy heart of the empire, unaware that the commander facing her was her own blood.",
+      "word_count": 1280,
+      "related_hero_ids": ["hero_silvanna", "hero_dyrroth", "hero_tigreal", "hero_alucard", "hero_thamuz"],
+      "related_region_ids": ["region_moniyan_empire", "region_abyss"],
+      "related_faction_ids": ["faction_moniyan_empire", "faction_lightborn", "faction_abyss"],
+      "source_ids": ["src_official_silvanna_bio", "src_official_sanctuary_cinematic", "src_official_dyrroth_bio"],
+      "conclusion": "The battle preserved the capital but sealed the tragic estrangement of the royal siblings, leaving the Moniyan Empire permanently on a war footing."
+    },
+    {
+      "story_id": "story_alucard_001",
+      "title": "A Hunter Born of Treachery",
+      "subtitle": "The purge of the Monastery and the lone blade of vengeance",
+      "url_slug": "a-hunter-born-of-treachery",
+      "story_type": "biographical_arc",
+      "recommended_reading_order": 2,
+      "introduction": "Branded the son of an imperial traitor before he could even wield a wooden practice blade, Alucard was forged in the cold shadows of the Monastery of Light, seeking justice beyond the dogmatic politics of the court.",
+      "word_count": 1040,
+      "related_hero_ids": ["hero_alucard", "hero_tigreal", "hero_alice"],
+      "related_region_ids": ["region_moniyan_empire", "region_monastery_of_light"],
+      "related_faction_ids": ["faction_moniyan_empire", "faction_lightborn", "faction_demon_hunters"],
+      "source_ids": ["src_official_alucard_bio", "src_official_tigreal_bio"],
+      "conclusion": "Alucard abandoned orthodox knighthood to hunt demons independently, becoming the empire's unsung shield against infiltration."
+    },
+    {
+      "story_id": "story_terizla_001",
+      "title": "The Ruin of the Iron Hammer",
+      "subtitle": "State terror, eternal torment, and the forge of retribution",
+      "url_slug": "ruin-of-the-iron-hammer",
+      "story_type": "tragedy_arc",
+      "recommended_reading_order": 3,
+      "introduction": "The greatest blacksmith in the Land of Dawn did not fall to monsters, but to the paranoia of human rulers who chained his flesh and shattered his mind in the subterranean dungeons of the capital.",
+      "word_count": 980,
+      "related_hero_ids": ["hero_terizla", "hero_alice", "hero_julian"],
+      "related_region_ids": ["region_moniyan_empire", "region_abyss"],
+      "related_faction_ids": ["faction_moniyan_empire", "faction_abyss"],
+      "source_ids": ["src_official_terizla_bio", "src_official_julian_bio"],
+      "conclusion": "Terizla's tragic weaponization exposed the moral rot of the historical Moniyan regime and armed the Abyss with living siege weaponry."
+    },
+    {
+      "story_id": "story_carmilla_001",
+      "title": "The Midnight Rebirth of Aberleen",
+      "subtitle": "Forbidden devotion, political tyranny, and the blood covenant",
+      "url_slug": "midnight-rebirth-of-aberleen",
+      "story_type": "romance_gothic_arc",
+      "recommended_reading_order": 5,
+      "introduction": "In the mist-shrouded southern province of Castle Aberleen, the daughter of a tyrannical imperial earl chose death over an arranged marriage, only to awaken into eternal darkness at the hands of the opera singer she adored.",
+      "word_count": 1150,
+      "related_hero_ids": ["hero_carmilla", "hero_cecilion"],
+      "related_region_ids": ["region_castle_aberleen", "region_moniyan_empire"],
+      "related_faction_ids": ["faction_moniyan_nobility", "faction_blood_demons"],
+      "source_ids": ["src_official_carmilla_bio", "src_official_cecilion_bio"],
+      "conclusion": "Carmilla and Cecilion severed Aberleen's reliance on imperial aristocratic supremacy, standing as sovereign protectors in the twilight between mankind and the Abyss."
+    }
+  ],
+  "chapters": [
+    {
+      "chapter_id": "chap_mon_001_1",
+      "story_id": "story_moniyan_001",
+      "sequence_number": 1,
+      "title": "The Cradle in the High Tower",
+      "summary": "Prince Aurelius II is celebrated on his first birthday as bells echo across the Imperial Capital.",
+      "content": "On the eve of Prince Aurelius II's first birthday, the capital was flooded with banners of azure and gold. High King Aurelius stood atop the palace ramparts, holding his infant son to the cheering populace. The bells of the Grand Cathedral tolled in harmonious tribute, promising decades of uninterrupted prosperity for the Moniyan dynasty. Little Silvanna, only a young girl, watched her brother clutch an imperial golden locket bearing the twin lion crest.",
+      "word_count": 280,
+      "related_hero_ids": ["hero_silvanna", "hero_dyrroth"],
+      "related_event_ids": ["event_royal_birth"],
+      "media_id": null,
+      "source_ids": ["src_official_silvanna_bio", "src_official_dyrroth_bio"]
+    },
+    {
+      "chapter_id": "chap_mon_001_2",
+      "story_id": "story_moniyan_001",
+      "sequence_number": 2,
+      "title": "The Night of the Silent Cradle",
+      "summary": "Abyssal shadows infiltrate the royal nursery, leaving only a blood-splattered crest behind.",
+      "content": "Midnight brought a unnatural frost. The palace guards stationed at the Royal Nursery collapsed without a sound, their veins blackened by Abyssal miasma. When the Queen Mother went to check on her baby, she found the crib overturned and the silk blankets drenched in claw marks. The crown prince was gone. Deep below the stone foundations, Thamuz had descended back into the chasm, bearing the future ruler of men into the hellscape.",
+      "word_count": 275,
+      "related_hero_ids": ["hero_dyrroth", "hero_thamuz", "hero_alice"],
+      "related_event_ids": ["event_prince_abduction"],
+      "media_id": null,
+      "source_ids": ["src_official_dyrroth_bio"]
+    },
+    {
+      "chapter_id": "chap_mon_001_3",
+      "story_id": "story_moniyan_001",
+      "sequence_number": 3,
+      "title": "Forged in the Lake of Lava",
+      "summary": "Thamuz subjects the young prince to lethal gladiatorial combat in the depths of the Abyss.",
+      "content": "In the subterranean depths, there was neither mercy nor motherly touch. Thamuz threw the child into the firepits of the Abyss. Day after day, the boy fought feral demons for scraps of meat, his imperial heritage twisted by raw instinct and survival. Under the corrupting whispers of Alice, his golden hair darkened, his eyes blazed with Abyssal fire, and his memory was scrubbed until he knew only one name: Dyrroth, the Son of the Abyss.",
+      "word_count": 285,
+      "related_hero_ids": ["hero_dyrroth", "hero_thamuz", "hero_alice"],
+      "related_event_ids": ["event_dyrroth_ascension"],
+      "media_id": null,
+      "source_ids": ["src_official_dyrroth_bio"]
+    },
+    {
+      "chapter_id": "chap_mon_001_4",
+      "story_id": "story_moniyan_001",
+      "sequence_number": 4,
+      "title": "The Oath of the Imperial Spear",
+      "summary": "Silvanna renounces courtly luxury to train as a knight and hunt for her brother.",
+      "content": "While the King sank into despondence and the court plotted quiet successions, Princess Silvanna stripped away her royal gown. Entering the training grounds of the Imperial Knights, she took up the lance. She swore an unbreakable oath before the altar of the Lord of Light: she would not take the throne nor seek comfort until she found her brother and brought justice to the creatures who stole him.",
+      "word_count": 280,
+      "related_hero_ids": ["hero_silvanna"],
+      "related_event_ids": ["event_silvanna_vow"],
+      "media_id": null,
+      "source_ids": ["src_official_silvanna_bio"]
+    },
+    {
+      "chapter_id": "chap_mon_002_1",
+      "story_id": "story_moniyan_002",
+      "sequence_number": 1,
+      "title": "War Horns on the Horizon",
+      "summary": "The Abyssal hordes march through the southern passes toward the imperial citadel.",
+      "content": "The earth trembled for three days before the sky turned the color of dried blood. From the volcanic fissures of the southern abyss marched an army unlike anything the Empire had confronted in a century. At its vanguard strode Dyrroth, his hands wreathed in dark energy, flanked by the Grand Lord of Lava, Thamuz. The Moniyan outer guard fell back in disarray toward the Imperial Sanctuary.",
+      "word_count": 310,
+      "related_hero_ids": ["hero_dyrroth", "hero_thamuz", "hero_tigreal"],
+      "related_event_ids": ["event_abyssal_incursion"],
+      "media_id": null,
+      "source_ids": ["src_official_sanctuary_cinematic", "src_official_silvanna_bio"]
+    },
+    {
+      "chapter_id": "chap_mon_002_2",
+      "story_id": "story_moniyan_002",
+      "sequence_number": 2,
+      "title": "The Shield of the Lightborn",
+      "summary": "Tigreal and the Lightborn knights form an iron defense before the sanctum gates.",
+      "content": "At the gates of the sanctuary, Commander Tigreal slammed his shield into the flagstones. Beside him, Alucard's blade cleaved demonic shock troops with surgical fury. Despite the valor of the Lightborn, the Abyssal numbers were relentless. Dyrroth cut through the veteran defenders like kindling, laughing as he smashed through the consecrated barricades, aiming straight for the heart of the empire's power.",
+      "word_count": 320,
+      "related_hero_ids": ["hero_tigreal", "hero_alucard", "hero_dyrroth"],
+      "related_event_ids": ["event_sanctuary_breach"],
+      "media_id": null,
+      "source_ids": ["src_official_tigreal_bio", "src_official_sanctuary_cinematic"]
+    },
+    {
+      "chapter_id": "chap_mon_002_3",
+      "story_id": "story_moniyan_002",
+      "sequence_number": 3,
+      "title": "The Awakening of the Lance",
+      "summary": "Silvanna communes with the Lord of Light, receiving divine power in the eleventh hour.",
+      "content": "Within the innermost sanctum, Silvanna knelt before the ancient crystal of light. With the demonic vanguard battering down the inner sanctuary doors, she offered her soul and service entirely to the Lord of Light. A radiant pillar struck down from the heavens, searing through the vaulted ceilings. When the dust cleared, Silvanna emerged clad in luminous armor, her lance radiating solar radiance.",
+      "word_count": 325,
+      "related_hero_ids": ["hero_silvanna"],
+      "related_event_ids": ["event_silvanna_ascension"],
+      "media_id": null,
+      "source_ids": ["src_official_silvanna_bio"]
+    },
+    {
+      "chapter_id": "chap_mon_002_4",
+      "story_id": "story_moniyan_002",
+      "sequence_number": 4,
+      "title": "Blood Against Blood",
+      "summary": "Silvanna and Dyrroth duel to a standstill, discovering their shared origin before retreating.",
+      "content": "Silvanna plunged into the fray, her spear colliding with Dyrroth's Abyssal Strike. Shockwaves shattered the stone courtyard. As their weapons locked face-to-face, Silvanna caught sight of the birthmark on the youth's neck and the broken remnants of the golden royal crest bound to his belt. 'Aurelius!' she gasped. Dyrroth recoiled in momentary agony as memories flickered through his mind, before sneering in disgust and ordering a tactical retreat into the chasm.",
+      "word_count": 325,
+      "related_hero_ids": ["hero_silvanna", "hero_dyrroth"],
+      "related_event_ids": ["event_sibling_duel"],
+      "media_id": null,
+      "source_ids": ["src_official_silvanna_bio", "src_official_dyrroth_bio"]
+    },
+    {
+      "chapter_id": "chap_alu_001_1",
+      "story_id": "story_alucard_001",
+      "sequence_number": 1,
+      "title": "The Blood on the Monastery Steps",
+      "summary": "The Monastery of Light is overrun following internal betrayal, taking Alucard's parents.",
+      "content": "Alucard was just a young boy when darkness spilled through the hallowed colonnades of the Monastery of Light. His father, a steadfast commander, held the line against encroaching demons while treacherous officials fled. When the dust settled, Alucard's parents were dead, and the imperial senate covered up their own negligence by branding the fallen commander a rogue traitor.",
+      "word_count": 260,
+      "related_hero_ids": ["hero_alucard", "hero_tigreal"],
+      "related_event_ids": ["event_monastery_fall"],
+      "media_id": null,
+      "source_ids": ["src_official_alucard_bio"]
+    },
+    {
+      "chapter_id": "chap_alu_001_2",
+      "story_id": "story_alucard_001",
+      "sequence_number": 2,
+      "title": "The Boy with the Wooden Sword",
+      "summary": "Tigreal takes pity on the orphaned boy and mentors him in the military academy.",
+      "content": "Ostracized by his peers and bearing the mark of an infamous lineage, Alucard spent day and night hacking at training dummies until his hands bled. Tigreal, recognizing the innocence and raw tenacity in the child's heart, stepped in as his protector. Under Tigreal's quiet sponsorship, Alucard became the most lethal swordsman in the cadet corps.",
+      "word_count": 260,
+      "related_hero_ids": ["hero_alucard", "hero_tigreal"],
+      "related_event_ids": ["event_alucard_tutelage"],
+      "media_id": null,
+      "source_ids": ["src_official_alucard_bio", "src_official_tigreal_bio"]
+    },
+    {
+      "chapter_id": "chap_alu_001_3",
+      "story_id": "story_alucard_001",
+      "sequence_number": 3,
+      "title": "The Demon Claw",
+      "summary": "Alucard retrieves his father's broken greatsword and binds an abyssal claw to his arm.",
+      "content": "On his graduation day, Alucard refused to take the knightly oath of absolute imperial loyalty. Instead, he journeyed to the ruins of the battlefield where his father perished. There, he recovered his family's broadsword, infusing it with demonic energy captured in an enchanted gauntlet. He cast aside his birth name and became Alucard—the demon hunter who walks the edge between light and darkness.",
+      "word_count": 260,
+      "related_hero_ids": ["hero_alucard"],
+      "related_event_ids": ["event_demon_hunter_birth"],
+      "media_id": null,
+      "source_ids": ["src_official_alucard_bio"]
+    },
+    {
+      "chapter_id": "chap_alu_001_4",
+      "story_id": "story_alucard_001",
+      "sequence_number": 4,
+      "title": "The Wandering Blade",
+      "summary": "Operating on the frontier, Alucard intercepts Abyssal plots before they reach the court.",
+      "content": "Now answering to no king, Alucard roams the border territories from Castle Aberleen to the edges of the Great Chasm. When the Abyssal invasion began, he answered Tigreal's call not out of allegiance to the Moniyan crown, but to ensure no other child suffered the loss that broke his own youth.",
+      "word_count": 260,
+      "related_hero_ids": ["hero_alucard", "hero_tigreal"],
+      "related_event_ids": ["event_sanctuary_breach"],
+      "media_id": null,
+      "source_ids": ["src_official_alucard_bio"]
+    },
+    {
+      "chapter_id": "chap_ter_001_1",
+      "story_id": "story_terizla_001",
+      "sequence_number": 1,
+      "title": "The Spark of the Free Forge",
+      "summary": "Terizla leads the independent Smith Syndicate, rejecting imperial monopoly.",
+      "content": "Long before the Abyssal Incursions, Terizla was the master craftsman of the Free Hills, capable of embedding life energy and ancient runes into steel. His creations surpassed anything produced by the Imperial Foundry. The Moniyan High Council sent emissaries demanding absolute subservience and the secret to his magical smithing, but Terizla adamantly refused to become the empire's weapon-maker.",
+      "word_count": 245,
+      "related_hero_ids": ["hero_terizla"],
+      "related_event_ids": ["event_syndicate_defiance"],
+      "media_id": null,
+      "source_ids": ["src_official_terizla_bio"]
+    },
+    {
+      "chapter_id": "chap_ter_001_2",
+      "story_id": "story_terizla_001",
+      "sequence_number": 2,
+      "title": "Ten Years of Iron and Ash",
+      "summary": "Imperial inquisitors imprison and torture Terizla, taking his family away.",
+      "content": "Under false charges of heresy, the imperial guard laid waste to the Smith Syndicate's workshops. Terizla was bound in enchanted chains and dragged into the black cells beneath the capital. For ten years, inquisitors broke his bones, extinguished his forges, and separated him from his infant son, demanding the secrets of his craft.",
+      "word_count": 245,
+      "related_hero_ids": ["hero_terizla", "hero_julian"],
+      "related_event_ids": ["event_terizla_imprisonment"],
+      "media_id": null,
+      "source_ids": ["src_official_terizla_bio", "src_official_julian_bio"]
+    },
+    {
+      "chapter_id": "chap_ter_001_3",
+      "story_id": "story_terizla_001",
+      "sequence_number": 3,
+      "title": "The Whisper in the Dark",
+      "summary": "Alice frees the broken blacksmith and weaponizes his unquenchable hatred.",
+      "content": "When Alice infiltrated the imperial subterranean vaults during an early Abyssal probe, she found a man whose soul burned with more hatred than the demons themselves. She shattered his shackles and fed his broken frame with dark magic. Embracing the darkness not out of loyalty to the Abyss, but out of total hatred for the Moniyan crown, Terizla took up his colossal war hammer once more.",
+      "word_count": 245,
+      "related_hero_ids": ["hero_terizla", "hero_alice"],
+      "related_event_ids": ["event_terizla_awakening"],
+      "media_id": null,
+      "source_ids": ["src_official_terizla_bio"]
+    },
+    {
+      "chapter_id": "chap_ter_001_4",
+      "story_id": "story_terizla_001",
+      "sequence_number": 4,
+      "title": "The Hammer of Vengeance",
+      "summary": "Terizla leads the siege lines, shattering imperial fortifications.",
+      "content": "In every battle that followed, Terizla became the battering ram of the dark armies. With every strike of his massive hammer, he screamed the names of his lost guild and family, shattering Moniyan shields into dust. The empire had created its own nemesis from the ash of its injustice.",
+      "word_count": 245,
+      "related_hero_ids": ["hero_terizla"],
+      "related_event_ids": ["event_abyssal_incursion"],
+      "media_id": null,
+      "source_ids": ["src_official_terizla_bio"]
+    },
+    {
+      "chapter_id": "chap_car_001_1",
+      "story_id": "story_carmilla_001",
+      "sequence_number": 1,
+      "title": "The Rose of Aberleen",
+      "summary": "Carmilla endures the suffocating aristocratic cage of Castle Aberleen.",
+      "content": "Castle Aberleen was an old southern fiefdom bound by rigid traditions and dynastic greed. Carmilla, the daughter of Earl Ansaac, lived as a prized bird in a gilded cage. Expected to marry into high nobility to secure imperial favors, she spent her days wandering the misty gardens, seeking an escape from a preordained life.",
+      "word_count": 285,
+      "related_hero_ids": ["hero_carmilla"],
+      "related_event_ids": ["event_aberleen_confinement"],
+      "media_id": null,
+      "source_ids": ["src_official_carmilla_bio"]
+    },
+    {
+      "chapter_id": "chap_car_001_2",
+      "story_id": "story_carmilla_001",
+      "sequence_number": 2,
+      "title": "The Song from the Shadow Opera",
+      "summary": "Carmilla meets the melancholic opera performer Cecilion, sparking forbidden love.",
+      "content": "When a traveling opera troupe arrived at Aberleen, Carmilla attended the performance. On stage was Cecilion, an actor whose voice held an intoxicating sorrow. Unlike the pompous nobles who courted her, Cecilion saw her true soul. Night after night, they met in secret near the fountain, sharing their fears and dreams beneath the moonlight.",
+      "word_count": 285,
+      "related_hero_ids": ["hero_carmilla", "hero_cecilion"],
+      "related_event_ids": ["event_forbidden_courtship"],
+      "media_id": null,
+      "source_ids": ["src_official_carmilla_bio", "src_official_cecilion_bio"]
+    },
+    {
+      "chapter_id": "chap_car_001_3",
+      "story_id": "story_carmilla_001",
+      "sequence_number": 3,
+      "title": "The Pity of Blood",
+      "summary": "Earl Ansaac arranges a forced political marriage, leading Carmilla to end her life.",
+      "content": "Discovering the affair and identifying Cecilion as an outcast Blood Demon, Earl Ansaac threw his daughter into solitary confinement and arranged her immediate marriage to Baron Tawil. Cecilion was forced to flee by imperial guards. On the morning of the wedding, refusing to become a political puppet, Carmilla severed her wrists with a concealed dagger, choosing death over submission.",
+      "word_count": 290,
+      "related_hero_ids": ["hero_carmilla", "hero_cecilion"],
+      "related_event_ids": ["event_carmilla_sacrifice"],
+      "media_id": null,
+      "source_ids": ["src_official_carmilla_bio", "src_official_cecilion_bio"]
+    },
+    {
+      "chapter_id": "chap_car_001_4",
+      "story_id": "story_carmilla_001",
+      "sequence_number": 4,
+      "title": "The Crimson Rebirth",
+      "summary": "Cecilion infiltrates the burial chapel and resurrects Carmilla into immortality.",
+      "content": "Grief-stricken, Cecilion stormed the Aberleen crypts that very night. Weeping over her cooling body, he bit his own wrist and performed the ancient Blood Demon rite of rebirth. Carmilla's eyes opened, now glowing with crimson fire. Hand in hand, the newly reborn Blood Demon nobility vanished into the night, leaving the corrupt human lords of Aberleen trembling in fear.",
+      "word_count": 290,
+      "related_hero_ids": ["hero_carmilla", "hero_cecilion"],
+      "related_event_ids": ["event_blood_rebirth"],
+      "media_id": null,
+      "source_ids": ["src_official_carmilla_bio", "src_official_cecilion_bio"]
+    }
+  ],
+  "timeline": [
+    {
+      "event_id": "event_terizla_imprisonment",
+      "title": "Purge of the Smith Syndicate & Torture of Terizla",
+      "description": "Moniyan imperial forces capture Terizla and destroy his independent artisan guild.",
+      "approximate_period": "Approximately 12-15 years prior to the Siege of the Sanctuary",
+      "chronology_type": "relative",
+      "confidence": "confirmed",
+      "story_ids": ["story_terizla_001"],
+      "chapter_ids": ["chap_ter_001_1", "chap_ter_001_2"],
+      "hero_ids": ["hero_terizla", "hero_julian"],
+      "region_ids": ["region_moniyan_empire"],
+      "faction_ids": ["faction_moniyan_empire"],
+      "source_ids": ["src_official_terizla_bio", "src_official_julian_bio"],
+      "connection_to_adjacent": "Instigates Terizla's deep vendetta against the Moniyan Empire, rendering him vulnerable to Alice's manipulation."
+    },
+    {
+      "event_id": "event_monastery_fall",
+      "title": "Fall of the Monastery of Light",
+      "description": "Demonic forces breach the sacred sanctuary; Alucard's parents perish during the defense.",
+      "approximate_period": "Approximately 10 years prior to the Siege of the Sanctuary",
+      "chronology_type": "relative",
+      "confidence": "confirmed",
+      "story_ids": ["story_alucard_001"],
+      "chapter_ids": ["chap_alu_001_1"],
+      "hero_ids": ["hero_alucard", "hero_tigreal"],
+      "region_ids": ["region_monastery_of_light"],
+      "faction_ids": ["faction_moniyan_empire"],
+      "source_ids": ["src_official_alucard_bio"],
+      "connection_to_adjacent": "Directly triggers Alucard's transition under Tigreal's wardship and his eventual departure from official imperial knighthood."
+    },
+    {
+      "event_id": "event_royal_birth",
+      "title": "Birth of Prince Aurelius II",
+      "description": "The heir to the Moniyan Empire is born to King Aurelius and celebrated across the realm.",
+      "approximate_period": "18 years prior to the Siege of the Sanctuary",
+      "chronology_type": "relative",
+      "confidence": "confirmed",
+      "story_ids": ["story_moniyan_001"],
+      "chapter_ids": ["chap_mon_001_1"],
+      "hero_ids": ["hero_silvanna", "hero_dyrroth"],
+      "region_ids": ["region_moniyan_empire"],
+      "faction_ids": ["faction_moniyan_empire"],
+      "source_ids": ["src_official_silvanna_bio", "src_official_dyrroth_bio"],
+      "connection_to_adjacent": "Precedes the catastrophic kidnapping that alters the balance of power in the Land of Dawn."
+    },
+    {
+      "event_id": "event_prince_abduction",
+      "title": "Abduction of the Infant Prince",
+      "description": "Thamuz and Alice kidnap Prince Aurelius II from the royal nursery on his first birthday.",
+      "approximate_period": "17 years prior to the Siege of the Sanctuary",
+      "chronology_type": "relative",
+      "confidence": "confirmed",
+      "story_ids": ["story_moniyan_001"],
+      "chapter_ids": ["chap_mon_001_2"],
+      "hero_ids": ["hero_dyrroth", "hero_thamuz", "hero_alice"],
+      "region_ids": ["region_moniyan_empire", "region_abyss"],
+      "faction_ids": ["faction_abyss"],
+      "source_ids": ["src_official_dyrroth_bio", "src_official_silvanna_bio"],
+      "connection_to_adjacent": "Leads to Silvanna's knightly vow and the creation of Dyrroth in the lava pits."
+    },
+    {
+      "event_id": "event_silvanna_vow",
+      "title": "Princess Silvanna's Martial Oath",
+      "description": "Silvanna foregoes succession to train with the Imperial Knights until her brother is found.",
+      "approximate_period": "Shortly following the royal abduction",
+      "chronology_type": "relative",
+      "confidence": "confirmed",
+      "story_ids": ["story_moniyan_001"],
+      "chapter_ids": ["chap_mon_001_4"],
+      "hero_ids": ["hero_silvanna"],
+      "region_ids": ["region_moniyan_empire"],
+      "faction_ids": ["faction_moniyan_empire", "faction_lightborn"],
+      "source_ids": ["src_official_silvanna_bio"],
+      "connection_to_adjacent": "Transforms Silvanna into the paramount military commander who later faces Dyrroth."
+    },
+    {
+      "event_id": "event_dyrroth_ascension",
+      "title": "Coronation of the Son of the Abyss",
+      "description": "Dyrroth emerges victorious from the Abyssal gladiatorial pits as commander of the vanguard.",
+      "approximate_period": "Preceding the major invasion",
+      "chronology_type": "relative",
+      "confidence": "confirmed",
+      "story_ids": ["story_moniyan_001"],
+      "chapter_ids": ["chap_mon_001_3"],
+      "hero_ids": ["hero_dyrroth", "hero_thamuz"],
+      "region_ids": ["region_abyss"],
+      "faction_ids": ["faction_abyss"],
+      "source_ids": ["src_official_dyrroth_bio"],
+      "connection_to_adjacent": "Provides the Abyssal forces with their supreme frontline commander."
+    },
+    {
+      "event_id": "event_carmilla_sacrifice",
+      "title": "Tragedy at Castle Aberleen and the Crimson Rite",
+      "description": "Carmilla rejects imperial noble marriage via suicide; Cecilion resurrects her into the Blood Demons.",
+      "approximate_period": "Contemporary with the Abyssal mobilisation",
+      "chronology_type": "relative",
+      "confidence": "confirmed",
+      "story_ids": ["story_carmilla_001"],
+      "chapter_ids": ["chap_car_001_3", "chap_car_001_4"],
+      "hero_ids": ["hero_carmilla", "hero_cecilion"],
+      "region_ids": ["region_castle_aberleen"],
+      "faction_ids": ["faction_blood_demons", "faction_moniyan_nobility"],
+      "source_ids": ["src_official_carmilla_bio", "src_official_cecilion_bio"],
+      "connection_to_adjacent": "Removes Castle Aberleen from unquestioned Moniyan aristocratic control as general war erupts."
+    },
+    {
+      "event_id": "event_abyssal_incursion",
+      "title": "The Grand Abyssal Offensive",
+      "description": "Thamuz, Dyrroth, and Terizla unleash a multi-front assault on the Moniyan frontier.",
+      "approximate_period": "Pivotal climax era",
+      "chronology_type": "relative",
+      "confidence": "confirmed",
+      "story_ids": ["story_moniyan_002", "story_terizla_001"],
+      "chapter_ids": ["chap_mon_002_1", "chap_ter_001_4"],
+      "hero_ids": ["hero_dyrroth", "hero_thamuz", "hero_terizla"],
+      "region_ids": ["region_moniyan_empire"],
+      "faction_ids": ["faction_abyss"],
+      "source_ids": ["src_official_sanctuary_cinematic", "src_official_silvanna_bio"],
+      "connection_to_adjacent": "Directly breaches the outer fortifications of the capital and leads into the Sanctuary assault."
+    },
+    {
+      "event_id": "event_sibling_duel",
+      "title": "The Sibling Standoff at the Imperial Sanctuary",
+      "description": "Silvanna awakens her divine power to repel Dyrroth, discovering his royal identity in combat.",
+      "approximate_period": "Climactic resolution",
+      "chronology_type": "relative",
+      "confidence": "confirmed",
+      "story_ids": ["story_moniyan_002"],
+      "chapter_ids": ["chap_mon_002_4"],
+      "hero_ids": ["hero_silvanna", "hero_dyrroth"],
+      "region_ids": ["region_moniyan_empire"],
+      "faction_ids": ["faction_moniyan_empire", "faction_abyss"],
+      "source_ids": ["src_official_sanctuary_cinematic", "src_official_silvanna_bio", "src_official_dyrroth_bio"],
+      "connection_to_adjacent": "Concludes the immediate invasion but cements the ongoing cold war between the siblings."
+    }
+  ],
+  "heroes": [
+    {
+      "hero_id": "hero_silvanna",
+      "canonical_name": "Silvanna",
+      "aliases": ["Princess of the Moniyan Empire", "Imperial Knightess"],
+      "documented_role": "Crown Princess and Commander of the Imperial Knights, wielder of the divine Light Lance.",
+      "region_id": "region_moniyan_empire",
+      "faction_id": "faction_moniyan_empire",
+      "story_references": ["story_moniyan_001", "story_moniyan_002"]
+    },
+    {
+      "hero_id": "hero_dyrroth",
+      "canonical_name": "Dyrroth",
+      "aliases": ["Prince Aurelius II", "Son of the Abyss"],
+      "documented_role": "Corrupted Moniyan heir who serves as the frontline warlord of the Abyss.",
+      "region_id": "region_abyss",
+      "faction_id": "faction_abyss",
+      "story_references": ["story_moniyan_001", "story_moniyan_002"]
+    },
+    {
+      "hero_id": "hero_thamuz",
+      "canonical_name": "Thamuz",
+      "aliases": ["Lord Lava", "Chief of the Fire Demons"],
+      "documented_role": "Warmongering general of the Abyss who raised and trained Dyrroth in combat.",
+      "region_id": "region_abyss",
+      "faction_id": "faction_abyss",
+      "story_references": ["story_moniyan_001", "story_moniyan_002"]
+    },
+    {
+      "hero_id": "hero_alice",
+      "canonical_name": "Alice",
+      "aliases": ["Queen of Apocalypse", "Blood Demon Queen"],
+      "documented_role": "Abyssal architect of manipulation, responsible for seducing mortals and corrupting captives.",
+      "region_id": "region_abyss",
+      "faction_id": "faction_abyss",
+      "story_references": ["story_moniyan_001", "story_terizla_001"]
+    },
+    {
+      "hero_id": "hero_alucard",
+      "canonical_name": "Alucard",
+      "aliases": ["Demon Hunter"],
+      "documented_role": "Disillusioned son of a fallen knight who wields a demon-infused broadsword.",
+      "region_id": "region_moniyan_empire",
+      "faction_id": "faction_demon_hunters",
+      "story_references": ["story_alucard_001", "story_moniyan_002"]
+    },
+    {
+      "hero_id": "hero_tigreal",
+      "canonical_name": "Tigreal",
+      "aliases": ["Warrior of Dawn", "Captain of the Lightborn"],
+      "documented_role": "Supreme Captain of the Moniyan Imperial Guard and paragon of orthodox chivalry.",
+      "region_id": "region_moniyan_empire",
+      "faction_id": "faction_lightborn",
+      "story_references": ["story_moniyan_002", "story_alucard_001"]
+    },
+    {
+      "hero_id": "hero_terizla",
+      "canonical_name": "Terizla",
+      "aliases": ["Executioner"],
+      "documented_role": "Vengeful master blacksmith weaponized by the Abyss following imperial torture.",
+      "region_id": "region_abyss",
+      "faction_id": "faction_abyss",
+      "story_references": ["story_terizla_001"]
+    },
+    {
+      "hero_id": "hero_julian",
+      "canonical_name": "Julian",
+      "aliases": ["Scarlet Raven"],
+      "documented_role": "Terizla's estranged son who was taken by the Moniyan church and trained as an inquisitor.",
+      "region_id": "region_moniyan_empire",
+      "faction_id": "faction_moniyan_empire",
+      "story_references": ["story_terizla_001"]
+    },
+    {
+      "hero_id": "hero_carmilla",
+      "canonical_name": "Carmilla",
+      "aliases": ["Shadow of Twilight"],
+      "documented_role": "Former human noblewoman of Aberleen reborn as an aristocratic Blood Demon.",
+      "region_id": "region_castle_aberleen",
+      "faction_id": "faction_blood_demons",
+      "story_references": ["story_carmilla_001"]
+    },
+    {
+      "hero_id": "hero_cecilion",
+      "canonical_name": "Cecilion",
+      "aliases": ["Embrace of Night"],
+      "documented_role": "Blood Demon opera singer living covertly among humans in Castle Aberleen.",
+      "region_id": "region_castle_aberleen",
+      "faction_id": "faction_blood_demons",
+      "story_references": ["story_carmilla_001"]
+    }
+  ],
+  "regions": [
+    {
+      "region_id": "region_moniyan_empire",
+      "canonical_name": "Moniyan Empire",
+      "description": "The dominant human civilization in the Land of Dawn, centered on devotion to the Lord of Light.",
+      "related_story_ids": ["story_moniyan_001", "story_moniyan_002", "story_alucard_001", "story_terizla_001"],
+      "associated_event_ids": ["event_royal_birth", "event_silvanna_vow", "event_sanctuary_breach", "event_sibling_duel"]
+    },
+    {
+      "region_id": "region_abyss",
+      "canonical_name": "The Abyss",
+      "description": "A subterranean volcanic chasm filled with corrosive energy and demon tribes bent on conquest.",
+      "related_story_ids": ["story_moniyan_001", "story_moniyan_002", "story_terizla_001"],
+      "associated_event_ids": ["event_prince_abduction", "event_dyrroth_ascension", "event_abyssal_incursion"]
+    },
+    {
+      "region_id": "region_monastery_of_light",
+      "canonical_name": "Monastery of Light",
+      "description": "A holy bastion of faith and martial training within imperial borders, ruined by corruption.",
+      "related_story_ids": ["story_alucard_001"],
+      "associated_event_ids": ["event_monastery_fall"]
+    },
+    {
+      "region_id": "region_castle_aberleen",
+      "canonical_name": "Castle Aberleen",
+      "description": "A southern misty province of the Moniyan Empire plagued by conservative aristocracy.",
+      "related_story_ids": ["story_carmilla_001"],
+      "associated_event_ids": ["event_carmilla_sacrifice"]
+    }
+  ],
+  "factions": [
+    {
+      "faction_id": "faction_moniyan_empire",
+      "canonical_name": "Moniyan Imperial Court",
+      "purpose": "Maintain imperial human sovereignty and worship of the Lord of Light.",
+      "member_hero_ids": ["hero_silvanna", "hero_tigreal", "hero_julian"],
+      "associated_story_ids": ["story_moniyan_001", "story_moniyan_002", "story_terizla_001"]
+    },
+    {
+      "faction_id": "faction_lightborn",
+      "canonical_name": "Lightborn Order",
+      "purpose": "Elite knightly guard dedicated to defending the Moniyan capital against Abyssal assaults.",
+      "member_hero_ids": ["hero_tigreal", "hero_silvanna", "hero_alucard"],
+      "associated_story_ids": ["story_moniyan_002"]
+    },
+    {
+      "faction_id": "faction_abyss",
+      "canonical_name": "The Abyssal Host",
+      "purpose": "Shatter the seals of the Land of Dawn and consume the realm in eternal darkness.",
+      "member_hero_ids": ["hero_thamuz", "hero_dyrroth", "hero_alice", "hero_terizla"],
+      "associated_story_ids": ["story_moniyan_001", "story_moniyan_002", "story_terizla_001"]
+    },
+    {
+      "faction_id": "faction_demon_hunters",
+      "canonical_name": "Order of Demon Hunters",
+      "purpose": "Autonomous operatives hunting demonic threats outside rigid imperial law.",
+      "member_hero_ids": ["hero_alucard"],
+      "associated_story_ids": ["story_alucard_001"]
+    },
+    {
+      "faction_id": "faction_blood_demons",
+      "canonical_name": "Blood Demon Enclave",
+      "purpose": "An ancient nocturnal humanoid lineage surviving discretely alongside humanity.",
+      "member_hero_ids": ["hero_cecilion", "hero_carmilla", "hero_alice"],
+      "associated_story_ids": ["story_carmilla_001"]
+    },
+    {
+      "faction_id": "faction_moniyan_nobility",
+      "canonical_name": "Provincial Aristocracy",
+      "purpose": "Feudal landowners managing regional estates under the Moniyan Crown.",
+      "member_hero_ids": [],
+      "associated_story_ids": ["story_carmilla_001"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_id": "rel_silvanna_dyrroth",
+      "source_entity": "hero_silvanna",
+      "target_entity": "hero_dyrroth",
+      "relationship_type": "family_siblings",
+      "description": "Biological older sister and younger brother, separated by abduction and pitted against each other as mortal enemies.",
+      "supporting_source_ids": ["src_official_silvanna_bio", "src_official_dyrroth_bio"],
+      "canon_status": "confirmed"
+    },
+    {
+      "relationship_id": "rel_thamuz_dyrroth",
+      "source_entity": "hero_thamuz",
+      "target_entity": "hero_dyrroth",
+      "relationship_type": "mentorship_martial",
+      "description": "Thamuz raised Dyrroth through brutality, molding the captured human prince into an Abyssal executioner.",
+      "supporting_source_ids": ["src_official_dyrroth_bio"],
+      "canon_status": "confirmed"
+    },
+    {
+      "relationship_id": "rel_tigreal_alucard",
+      "source_entity": "hero_tigreal",
+      "target_entity": "hero_alucard",
+      "relationship_type": "mentorship_guardian",
+      "description": "Tigreal protected Alucard from persecution following his father's demise and trained him in the sword.",
+      "supporting_source_ids": ["src_official_alucard_bio"],
+      "canon_status": "confirmed"
+    },
+    {
+      "relationship_id": "rel_carmilla_cecilion",
+      "source_entity": "hero_carmilla",
+      "target_entity": "hero_cecilion",
+      "relationship_type": "romantic_partners",
+      "description": "Soulmates bound through forbidden love and blood transmutation, operating as nocturnal protectors.",
+      "supporting_source_ids": ["src_official_carmilla_bio", "src_official_cecilion_bio"],
+      "canon_status": "confirmed"
+    },
+    {
+      "relationship_id": "rel_terizla_julian",
+      "source_entity": "hero_terizla",
+      "target_entity": "hero_julian",
+      "relationship_type": "family_parent_child",
+      "description": "Biological father and son separated during the imperial purge of the Smith Syndicate.",
+      "supporting_source_ids": ["src_official_terizla_bio", "src_official_julian_bio"],
+      "canon_status": "confirmed"
+    },
+    {
+      "relationship_id": "rel_alice_terizla",
+      "source_entity": "hero_alice",
+      "target_entity": "hero_terizla",
+      "relationship_type": "manipulator_weapon",
+      "description": "Alice freed Terizla from the imperial dungeons to channel his hatred into an Abyssal siege weapon.",
+      "supporting_source_ids": ["src_official_terizla_bio"],
+      "canon_status": "confirmed"
+    }
+  ],
+  "story_connections": [
+    {
+      "connection_id": "conn_mon1_mon2",
+      "source_story_id": "story_moniyan_001",
+      "target_story_id": "story_moniyan_002",
+      "connection_type": "direct_continuation",
+      "description": "The Prince of Darkness sets up the origins and abduction of Dyrroth, which directly culminates in his assault on Silvanna in the Siege of the Sanctuary.",
+      "connecting_hero_ids": ["hero_silvanna", "hero_dyrroth", "hero_thamuz"],
+      "connecting_event_ids": ["event_prince_abduction", "event_sibling_duel"]
+    },
+    {
+      "connection_id": "conn_alu_mon2",
+      "source_story_id": "story_alucard_001",
+      "target_story_id": "story_moniyan_002",
+      "connection_type": "direct_crossover",
+      "description": "Alucard's rogue training converges with the defense of the capital when Tigreal rallies the Lightborn against Dyrroth's vanguard.",
+      "connecting_hero_ids": ["hero_alucard", "hero_tigreal"],
+      "connecting_event_ids": ["event_sanctuary_breach"]
+    },
+    {
+      "connection_id": "conn_ter_mon2",
+      "source_story_id": "story_terizla_001",
+      "target_story_id": "story_moniyan_002",
+      "connection_type": "parallel_front",
+      "description": "Terizla provides the Abyssal host with the siege weapons and brute assault force that breaches the Moniyan fortifications during the incursion.",
+      "connecting_hero_ids": ["hero_terizla", "hero_alice"],
+      "connecting_event_ids": ["event_abyssal_incursion"]
+    },
+    {
+      "connection_id": "conn_car_mon1",
+      "source_story_id": "story_carmilla_001",
+      "target_story_id": "story_moniyan_001",
+      "connection_type": "thematic_and_regional",
+      "description": "The tragic oppression in Castle Aberleen highlights the internal political decline of the Moniyan Empire while the capital is occupied with the royal disappearance.",
+      "connecting_hero_ids": ["hero_carmilla", "hero_cecilion"],
+      "connecting_event_ids": ["event_carmilla_sacrifice"]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src_official_silvanna_bio",
+      "page_title": "Silvanna Hero Biography & Mastery Code",
+      "original_url": "https://play.mobilelegends.com/lore/hero/Silvanna",
+      "source_type": "official_biography",
+      "publisher": "Moonton",
+      "publication_date": null,
+      "date_accessed": "2026-10-28",
+      "supported_claims": ["Silvanna's vow to find Aurelius II", "Awakening of the Light Lance", "Confrontation with Dyrroth"],
+      "verification_status": "confirmed",
+      "limitations": "Does not give calendar year dates; timeline is established through sequential relative events."
+    },
+    {
+      "source_id": "src_official_dyrroth_bio",
+      "page_title": "Dyrroth Hero Biography & Mastery Code",
+      "original_url": "https://play.mobilelegends.com/lore/hero/Dyrroth",
+      "source_type": "official_biography",
+      "publisher": "Moonton",
+      "publication_date": null,
+      "date_accessed": "2026-10-28",
+      "supported_claims": ["Abduction of Prince Aurelius II on his first birthday", "Mentorship under Thamuz and Alice", "Recognition of royal insignia"],
+      "verification_status": "confirmed",
+      "limitations": "Omits specific Abyssal geography beyond the Lava Domain."
+    },
+    {
+      "source_id": "src_official_sanctuary_cinematic",
+      "page_title": "Lightborn: The Siege of Imperial Sanctuary",
+      "original_url": "https://play.mobilelegends.com/lore/home",
+      "source_type": "official_cinematic",
+      "publisher": "Moonton",
+      "publication_date": "2019-11-20",
+      "date_accessed": "2026-10-28",
+      "supported_claims": ["Tigreal, Alucard, and Silvanna defending the inner capital", "Dyrroth leading the vanguard breach"],
+      "verification_status": "confirmed",
+      "limitations": "Action cinematic; excludes detailed dialogue leading up to the breach."
+    },
+    {
+      "source_id": "src_official_alucard_bio",
+      "page_title": "Alucard Hero Biography",
+      "original_url": "https://play.mobilelegends.com/lore/hero/Alucard",
+      "source_type": "official_biography",
+      "publisher": "Moonton",
+      "publication_date": null,
+      "date_accessed": "2026-10-28",
+      "supported_claims": ["Fall of the Monastery of Light", "Tigreal's sponsorship", "Demon hunter independence"],
+      "verification_status": "confirmed",
+      "limitations": "Secondary retcons modified early lore; current version stabilizes his relationship with Tigreal."
+    },
+    {
+      "source_id": "src_official_terizla_bio",
+      "page_title": "Terizla Hero Biography",
+      "original_url": "https://play.mobilelegends.com/lore/hero/Terizla",
+      "source_type": "official_biography",
+      "publisher": "Moonton",
+      "publication_date": null,
+      "date_accessed": "2026-10-28",
+      "supported_claims": ["Imprisonment of the Smith Syndicate", "Ten years of torture", "Liberation by Alice"],
+      "verification_status": "confirmed",
+      "limitations": "Exact dates of the Syndicate's founding remain unstated."
+    },
+    {
+      "source_id": "src_official_julian_bio",
+      "page_title": "Julian - The Scarlet Raven Lore",
+      "original_url": "https://play.mobilelegends.com/lore/hero/Julian",
+      "source_type": "official_biography",
+      "publisher": "Moonton",
+      "publication_date": "2022-05-24",
+      "date_accessed": "2026-10-28",
+      "supported_claims": ["Julian's status as Terizla's son taken during the purge of the smiths"],
+      "verification_status": "confirmed",
+      "limitations": "Presents perspective from the Ravens squad, confirming Terizla's lineage."
+    },
+    {
+      "source_id": "src_official_carmilla_bio",
+      "page_title": "Carmilla Hero Biography",
+      "original_url": "https://play.mobilelegends.com/lore/hero/Carmilla",
+      "source_type": "official_biography",
+      "publisher": "Moonton",
+      "publication_date": null,
+      "date_accessed": "2026-10-28",
+      "supported_claims": ["Earl Ansaac's tyranny", "Suicide at Aberleen", "Blood covenant rebirth with Cecilion"],
+      "verification_status": "confirmed",
+      "limitations": "Does not establish direct battlefield interaction with the northern imperial army."
+    },
+    {
+      "source_id": "src_official_cecilion_bio",
+      "page_title": "Cecilion Hero Biography",
+      "original_url": "https://play.mobilelegends.com/lore/hero/Cecilion",
+      "source_type": "official_biography",
+      "publisher": "Moonton",
+      "publication_date": null,
+      "date_accessed": "2026-10-28",
+      "supported_claims": ["Nocturnal Blood Demon identity", "Romance with Carmilla", "Escape into darkness"],
+      "verification_status": "confirmed",
+      "limitations": "Focuses primarily on theatrical and romantic lore."
+    },
+    {
+      "source_id": "src_official_tigreal_bio",
+      "page_title": "Tigreal Hero Biography",
+      "original_url": "https://play.mobilelegends.com/lore/hero/Tigreal",
+      "source_type": "official_biography",
+      "publisher": "Moonton",
+      "publication_date": null,
+      "date_accessed": "2026-10-28",
+      "supported_claims": ["Captaincy of the Lightborn", "Defense of the Empire against Abyssal forces"],
+      "verification_status": "confirmed",
+      "limitations": "Broad military overview."
+    },
+    {
+      "source_id": "src_official_moniyan_annals",
+      "page_title": "World Guide: Moniyan Empire & Factions",
+      "original_url": "https://play.mobilelegends.com/lore/home",
+      "source_type": "official_story",
+      "publisher": "Moonton",
+      "publication_date": null,
+      "date_accessed": "2026-10-28",
+      "supported_claims": ["Geopolitical structure of the Moniyan Empire, the Imperial Sanctuary, and the Abyss"],
+      "verification_status": "confirmed",
+      "limitations": "Continuity underwent minor rewrites during the Project NEXT overhauls."
+    }
+  ],
+  "media": [
+    {
+      "media_id": "med_silvanna_portrait",
+      "intended_use": "Hero key art and story hero illustration",
+      "related_story_ids": ["story_moniyan_001", "story_moniyan_002"],
+      "related_chapter_ids": ["chap_mon_001_4", "chap_mon_002_3"],
+      "related_hero_ids": ["hero_silvanna"],
+      "related_event_ids": ["event_silvanna_ascension"],
+      "original_source_url": "https://play.mobilelegends.com/lore/hero/Silvanna",
+      "asset_url": null,
+      "source_type": "official_illustration",
+      "attribution": "Moonton Official Art Team",
+      "usage_status": "fair_use_editorial",
+      "verification_status": "confirmed",
+      "alt_text": "Princess Silvanna clad in silver and gold armor wielding her luminous lance.",
+      "fallback_behavior": "render_placeholder_icon"
+    },
+    {
+      "media_id": "med_dyrroth_chasm",
+      "intended_use": "Story header art for the Prince of Darkness",
+      "related_story_ids": ["story_moniyan_001"],
+      "related_chapter_ids": ["chap_mon_001_3"],
+      "related_hero_ids": ["hero_dyrroth"],
+      "related_event_ids": ["event_dyrroth_ascension"],
+      "original_source_url": "https://play.mobilelegends.com/lore/hero/Dyrroth",
+      "asset_url": null,
+      "source_type": "official_illustration",
+      "attribution": "Moonton Official Art Team",
+      "usage_status": "fair_use_editorial",
+      "verification_status": "confirmed",
+      "alt_text": "Dyrroth surrounded by jagged subterranean volcanic rocks and demonic shadows.",
+      "fallback_behavior": "render_placeholder_icon"
+    },
+    {
+      "media_id": "med_sanctuary_battle",
+      "intended_use": "Climactic battle depiction for the Siege of the Sanctuary",
+      "related_story_ids": ["story_moniyan_002"],
+      "related_chapter_ids": ["chap_mon_002_4"],
+      "related_hero_ids": ["hero_silvanna", "hero_dyrroth", "hero_tigreal"],
+      "related_event_ids": ["event_sibling_duel"],
+      "original_source_url": "https://play.mobilelegends.com/lore/home",
+      "asset_url": null,
+      "source_type": "official_cinematic_still",
+      "attribution": "Moonton Cinematics",
+      "usage_status": "fair_use_editorial",
+      "verification_status": "confirmed",
+      "alt_text": "Silvanna's spear clashing against Dyrroth's abyssal claw in front of the Imperial Sanctuary.",
+      "fallback_behavior": "render_placeholder_icon"
+    },
+    {
+      "media_id": "med_carmilla_cecilion",
+      "intended_use": "Character duet feature image for Aberleen gothic romance",
+      "related_story_ids": ["story_carmilla_001"],
+      "related_chapter_ids": ["chap_car_001_2", "chap_car_001_4"],
+      "related_hero_ids": ["hero_carmilla", "hero_cecilion"],
+      "related_event_ids": ["event_blood_rebirth"],
+      "original_source_url": "https://play.mobilelegends.com/lore/hero/Carmilla",
+      "asset_url": null,
+      "source_type": "official_illustration",
+      "attribution": "Moonton Official Art Team",
+      "usage_status": "fair_use_editorial",
+      "verification_status": "confirmed",
+      "alt_text": "Cecilion holding Carmilla under the twilight moon, surrounded by crimson bats and mist.",
+      "fallback_behavior": "render_placeholder_icon"
+    }
+  ],
+  "reading_paths": [
+    {
+      "path_id": "path_imperial_tragedy",
+      "path_name": "The Fall and Stand of the Moniyan Empire",
+      "description": "Chronological thematic progression tracking the collapse of the imperial family through the eyes of its lost prince, its holy defender, its forgotten blacksmith, its lone hunter, and its southern frontier.",
+      "recommended_story_sequence": [
+        "story_moniyan_001",
+        "story_alucard_001",
+        "story_terizla_001",
+        "story_moniyan_002",
+        "story_carmilla_001"
+      ]
+    }
+  ],
+  "research_gaps": [
+    {
+      "gap_id": "gap_001_exact_calendar",
+      "topic": "Absolute In-Universe Calendar System",
+      "description": "Official MLBB lore does not use a standardized Gregorian or standardized Solar calendar year. While relative timelines are firmly established, specific numerical year dates across different eras remain unpublished by Moonton.",
+      "impact": "Requires chronology to be modeled using relative anchors rather than rigid integer years."
+    },
+    {
+      "gap_id": "gap_002_dyrroth_memory",
+      "topic": "Post-Sanctuary Status of Aurelius II's Identity",
+      "description": "Official materials conclude with Dyrroth recognizing his birthmark and retreating, but have not yet canonically confirmed whether Dyrroth will ever regain his human identity or if his corruption is irreversible.",
+      "impact": "Keeps the sibling relationship in a permanent state of tragic open conflict."
+    }
+  ]
+}
