@@ -42,9 +42,9 @@ export const HeroBillboard: React.FC<HeroBillboardProps> = ({
             key={`backdrop-${activeStory.story_id}`}
             src={activeStory.backdropUrl}
             alt={activeStory.title}
+            referrerPolicy="no-referrer"
             className="w-full h-full object-cover object-center filter brightness-[0.75] contrast-[1.1] scale-105 transition-transform duration-1000 ease-out"
             onError={(e) => {
-              // Fallback to coverArt if backdrop fails
               if (activeStory.coverArt && (e.target as HTMLImageElement).src !== activeStory.coverArt) {
                 (e.target as HTMLImageElement).src = activeStory.coverArt;
               }
@@ -66,6 +66,7 @@ export const HeroBillboard: React.FC<HeroBillboardProps> = ({
             key={`character-${activeStory.story_id}`}
             src={activeStory.coverArt}
             alt={activeStory.title}
+            referrerPolicy="no-referrer"
             className="h-[85%] max-h-[750px] object-contain object-right filter drop-shadow-[0_20px_45px_rgba(0,0,0,0.95)] animate-fade-in transition-all duration-700"
             onError={(e) => {
               (e.target as HTMLElement).style.display = 'none';

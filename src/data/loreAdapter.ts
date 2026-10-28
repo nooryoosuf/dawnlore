@@ -19,7 +19,7 @@ import {
 export const rawLore: RawLoreData = rawData as unknown as RawLoreData;
 
 // High-fidelity image mappings for the 10 heroes
-// Combines Moonton official CDN assets and high-res verified transparent renders
+// Sourced directly from Moonton's official GMS CDN asset pipelines
 export const HERO_ASSET_MAP: Record<
   string,
   {
@@ -33,8 +33,8 @@ export const HERO_ASSET_MAP: Record<
   }
 > = {
   hero_silvanna: {
-    avatarUrl: 'https://akmwebstatic.yuanzhanapp.com/web/madmin/image_743db67971d02b6a9a8065d9cedade23.png',
-    splashUrl: 'https://static.wikia.nocookie.net/mobile-legends/images/9/97/Hero901-portrait.png/revision/latest',
+    avatarUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_5e7b297af7c6e32a420b897aa4998071.png',
+    splashUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_fe98dd2e19bb6c29591763d1d11a3eb7.png',
     backdropUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_1582f0613b6c03e1f4f147a3da23d70a.png',
     classType: 'Fighter / Magic Burst',
     accentColor: '#eab308', // Imperial Gold
@@ -42,8 +42,8 @@ export const HERO_ASSET_MAP: Record<
     quote: 'Only by extinguishing the darkness can we restore the dawn.'
   },
   hero_dyrroth: {
-    avatarUrl: 'https://akmwebstatic.yuanzhanapp.com/web/madmin/image_1604bdeb797af75682b7e3ae3728e3db.png',
-    splashUrl: 'https://static.wikia.nocookie.net/mobile-legends/images/2/2c/Hero851-portrait.png/revision/latest',
+    avatarUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_8ec13b59871b2862d773beac2d69fa3e.png',
+    splashUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_bf8dcb20923cee2407563e0fe88aa557.png',
     backdropUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_ce1031d6d4e49f33719bd3d833a9b45b.png',
     classType: 'Fighter / Abyssal Striker',
     accentColor: '#ef4444', // Abyssal Crimson
@@ -51,8 +51,8 @@ export const HERO_ASSET_MAP: Record<
     quote: 'I was born of fire and shadow. The light offers nothing to me.'
   },
   hero_thamuz: {
-    avatarUrl: 'https://akmwebstatic.yuanzhanapp.com/web/madmin/image_5348df62801bc2fe1c093f8607c2e4a2.png',
-    splashUrl: 'https://static.wikia.nocookie.net/mobile-legends/images/7/74/Hero721-portrait.png/revision/latest',
+    avatarUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_b5ad55e408b68acf6a86e7ff76f5f569.png',
+    splashUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_3e7e133556af2f5d82f49fa8624b6bd5.png',
     backdropUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_2fc38a2e465b275a72c3308152cab77d.png',
     classType: 'Fighter / Lord of Lava',
     accentColor: '#f97316', // Molten Orange
@@ -60,8 +60,8 @@ export const HERO_ASSET_MAP: Record<
     quote: 'The weak will burn, and the Land of Dawn will bow before the flames.'
   },
   hero_alice: {
-    avatarUrl: 'https://akmwebstatic.yuanzhanapp.com/web/madmin/image_7f0da9c3ddefff4530e8dbe17054c45e.png',
-    splashUrl: 'https://static.wikia.nocookie.net/mobile-legends/images/8/88/Hero041-portrait.png/revision/latest',
+    avatarUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_18300163a5a912a84adb52b8d59b4618.png',
+    splashUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_ec3d5c825e893947a235ea9ea59fff77.png',
     backdropUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_34013ffb449baa842122de6126e43259.png',
     classType: 'Mage / Tank',
     accentColor: '#a855f7', // Blood Demon Violet
@@ -69,8 +69,8 @@ export const HERO_ASSET_MAP: Record<
     quote: 'Your sweetest desires make you my easiest puppet.'
   },
   hero_alucard: {
-    avatarUrl: 'https://akmwebstatic.yuanzhanapp.com/web/madmin/image_2f53289ddd423fa9bc95d380b6d79719.jpg',
-    splashUrl: 'https://static.wikia.nocookie.net/mobile-legends/images/0/01/Hero071-portrait.png/revision/latest',
+    avatarUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_0f51b6906e08897aa02330d65b0deeac.png',
+    splashUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_df695a059c0f0a63fe922786098089cd.png',
     backdropUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_3c0135f79624621b63ff686f540b2a78.png',
     classType: 'Fighter / Demon Hunter',
     accentColor: '#3b82f6', // Azure Steel
@@ -78,8 +78,8 @@ export const HERO_ASSET_MAP: Record<
     quote: 'Demons shall pay with blood for the lies they sowed.'
   },
   hero_tigreal: {
-    avatarUrl: 'https://akmwebstatic.yuanzhanapp.com/web/madmin/image_23a7a603ff9d20074777d52e2eb202f3.jpg',
-    splashUrl: 'https://static.wikia.nocookie.net/mobile-legends/images/b/b8/Hero061-portrait.png/revision/latest',
+    avatarUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_8b30576754be1a4f8bebd09df8d6bec7.png',
+    splashUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_4e0005dbfb1376beaccc54ef7aa39375.png',
     backdropUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_2f346943d85318a466b5eba513682d7c.png',
     classType: 'Tank / Vanguard',
     accentColor: '#60a5fa', // Lightborn Blue
@@ -87,8 +87,8 @@ export const HERO_ASSET_MAP: Record<
     quote: 'A knight stands firm so that others may live without fear.'
   },
   hero_terizla: {
-    avatarUrl: 'https://akmwebstatic.yuanzhanapp.com/web/madmin/image_45c908d0d59990c13d229ab22db05ebb.png',
-    splashUrl: 'https://static.wikia.nocookie.net/mobile-legends/images/6/6d/Hero821-portrait.png/revision/latest',
+    avatarUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_c4bb270c28c7be663f57e993b0d6d3d8.png',
+    splashUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_fcfbde52476bad8c8e67951240de854c.png',
     backdropUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_7fe813b1c6b84e6fb234d0428c0c7cd7.png',
     classType: 'Fighter / Heavy Juggernaut',
     accentColor: '#b91c1c', // Blood Iron
@@ -96,8 +96,8 @@ export const HERO_ASSET_MAP: Record<
     quote: 'Ten years of torment... every blow from my hammer shall be repaid.'
   },
   hero_julian: {
-    avatarUrl: 'https://akmweb.youngjoygame.com/web/madmin/image/7eb35b7780eaa94993aaada931b28adb.png?w=150-150-0d1318',
-    splashUrl: 'https://static.wikia.nocookie.net/mobile-legends/images/0/0c/Hero1161-portrait.png/revision/latest',
+    avatarUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_5511ddc0ad2789b525f32ef572b017eb.png',
+    splashUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_44891c699fb1c00fc4a7fa59ea95b8b3.png',
     backdropUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_af290850533bcaeaf7630d573969a74c.png',
     classType: 'Fighter / Mage',
     accentColor: '#38bdf8', // Raven Sky
@@ -105,8 +105,8 @@ export const HERO_ASSET_MAP: Record<
     quote: 'I follow the light that is real, not the words of kings.'
   },
   hero_carmilla: {
-    avatarUrl: 'https://akmwebstatic.yuanzhanapp.com/web/madmin/image_b7f2851b57e938c41ce32c00c685e0c8.jpg',
-    splashUrl: 'https://static.wikia.nocookie.net/mobile-legends/images/3/30/Hero921-portrait.png/revision/latest',
+    avatarUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_6fb8f120dafdcbc1b5da2a2667016ad5.png',
+    splashUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_358d6ad9cff97fc3bfef8a2bd4acbadd.png',
     backdropUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_429bbf3c9f1b16aa45bdfdeac80761e5.png',
     classType: 'Support / Tank',
     accentColor: '#f43f5e', // Crimson Rose
@@ -114,8 +114,8 @@ export const HERO_ASSET_MAP: Record<
     quote: 'If loving you means embracing the night, I would die a thousand times.'
   },
   hero_cecilion: {
-    avatarUrl: 'https://akmwebstatic.yuanzhanapp.com/web/madmin/image_a66ec3b1b8036839538cc0ade8aff50c.jpg',
-    splashUrl: 'https://static.wikia.nocookie.net/mobile-legends/images/7/7f/Hero911-portrait.png/revision/latest',
+    avatarUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_045399c265021d47da6512e6de20b64f.png',
+    splashUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_af02ce891528cd3576858589d8d33d8d.png',
     backdropUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_c0bb649180f1f1bfd0ba81b78ee35844.png',
     classType: 'Mage / Late-Game Burst',
     accentColor: '#c084fc', // Opera Twilight
@@ -137,35 +137,35 @@ export const STORY_THEMES: Record<
 > = {
   story_moniyan_001: {
     themeGradient: 'from-amber-950/60 via-red-950/40 to-night',
-    coverArt: 'https://static.wikia.nocookie.net/mobile-legends/images/2/2c/Hero851-portrait.png/revision/latest',
+    coverArt: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_bf8dcb20923cee2407563e0fe88aa557.png',
     backdropUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_ce1031d6d4e49f33719bd3d833a9b45b.png',
     badge: 'Royal Tragedy Arc',
     era: 'Imperial Calendar Year 20'
   },
   story_moniyan_002: {
     themeGradient: 'from-blue-950/60 via-amber-950/40 to-night',
-    coverArt: 'https://static.wikia.nocookie.net/mobile-legends/images/9/97/Hero901-portrait.png/revision/latest',
+    coverArt: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_fe98dd2e19bb6c29591763d1d11a3eb7.png',
     backdropUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_1582f0613b6c03e1f4f147a3da23d70a.png',
     badge: 'Epic Climax',
     era: 'Siege of the Sanctuary'
   },
   story_alucard_001: {
     themeGradient: 'from-slate-900/80 via-blue-950/40 to-night',
-    coverArt: 'https://static.wikia.nocookie.net/mobile-legends/images/0/01/Hero071-portrait.png/revision/latest',
+    coverArt: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_df695a059c0f0a63fe922786098089cd.png',
     backdropUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_3c0135f79624621b63ff686f540b2a78.png',
     badge: 'Vengeance Chronicles',
     era: 'Post-Monastery Purge'
   },
   story_terizla_001: {
     themeGradient: 'from-red-950/70 via-stone-900/60 to-night',
-    coverArt: 'https://static.wikia.nocookie.net/mobile-legends/images/6/6d/Hero821-portrait.png/revision/latest',
+    coverArt: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_fcfbde52476bad8c8e67951240de854c.png',
     backdropUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_7fe813b1c6b84e6fb234d0428c0c7cd7.png',
     badge: 'Dark Inquisition Arc',
     era: 'Subterranean Imperial Inquisition'
   },
   story_carmilla_001: {
     themeGradient: 'from-purple-950/70 via-rose-950/50 to-night',
-    coverArt: 'https://static.wikia.nocookie.net/mobile-legends/images/3/30/Hero921-portrait.png/revision/latest',
+    coverArt: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_358d6ad9cff97fc3bfef8a2bd4acbadd.png',
     backdropUrl: 'https://akmweb.youngjoygame.com/web/svnres/img/test/homepage_2_2_16_1232_1/100_429bbf3c9f1b16aa45bdfdeac80761e5.png',
     badge: 'Gothic Romance Arc',
     era: 'Aberleen Blood Moon'

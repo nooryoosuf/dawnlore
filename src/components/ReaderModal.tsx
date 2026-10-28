@@ -42,10 +42,29 @@ export const ReaderModal: React.FC<ReaderModalProps> = ({
   const [activeChapterIndex, setActiveChapterIndex] = useState(0);
   const [fontFamily, setFontFamily] = useState<'serif' | 'sans'>('serif');
   const [fontSizeLevel, setFontSizeLevel] = useState<number>(1); // 0 = sm, 1 = md, 2 = lg, 3 = xl
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // Collapsed by default
   const [readingProgress, setReadingProgress] = useState(0);
 
   const contentRef = useRef<HTMLDivElement>(null);
+  const touchStartX = useRef<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const deltaX = e.changedTouches[0].clientX - touchStartX.current;
+    // Swipe right from left edge (< 70px) opens chapter drawer
+    if (touchStartX.current < 70 && deltaX > 45) {
+      setIsSidebarOpen(true);
+    }
+    // Swipe left when drawer is open closes it
+    if (isSidebarOpen && deltaX < -45) {
+      setIsSidebarOpen(false);
+    }
+    touchStartX.current = null;
+  };
 
   useEffect(() => {
     setActiveChapterIndex(0);
@@ -217,63 +236,100 @@ export const ReaderModal: React.FC<ReaderModalProps> = ({
         />
       </header>
 
-      {/* Main Reader Body */}
-      <div className="flex-1 flex overflow-hidden">
-        {/* Table of Contents Drawer (Left) */}
+      {/* Main Reader Body with Swipe Detection */}
+      <div
+        className="flex-1 flex overflow-hidden relative"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
+        {/* Slide-Over Table of Contents Drawer with Backdrop */}
         {isSidebarOpen && (
-          <aside className="w-72 sm:w-80 bg-night border-r border-white/10 flex flex-col overflow-y-auto animate-fade-in flex-shrink-0">
-            <div className="p-4 border-b border-white/10">
-              <span className="text-[10px] uppercase font-serif tracking-widest text-gold-400 font-bold">
-                Table of Contents
-              </span>
-              <h3 className="font-serif text-sm font-bold text-ivory mt-0.5">
-                {story.chapters.length} Chapters
-              </h3>
-            </div>
-            <div className="divide-y divide-white/5 flex-1">
-              {story.chapters.map((chap, idx) => {
-                const isActive = idx === activeChapterIndex;
-                return (
-                  <button
-                    key={chap.chapter_id}
-                    onClick={() => {
-                      setActiveChapterIndex(idx);
-                      contentRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
-                    }}
-                    className={`w-full text-left p-4 transition-all duration-200 ${
-                      isActive
-                        ? 'bg-gold-500/15 border-l-4 border-gold-400 text-gold-300'
-                        : 'hover:bg-card text-parchment/70 hover:text-ivory'
-                    }`}
-                  >
-                    <div className="flex items-center justify-between text-[10px] uppercase tracking-wider mb-1 font-sans">
-                      <span className={isActive ? 'text-gold-400 font-bold' : 'text-parchment/40'}>
-                        Chapter 0{chap.sequence_number}
-                      </span>
-                      <span className="text-parchment/40">{chap.word_count} words</span>
-                    </div>
-                    <h5 className="font-serif text-xs sm:text-sm font-bold line-clamp-1">
-                      {chap.title}
-                    </h5>
-                    <p className="text-[11px] font-sans text-parchment/50 line-clamp-2 mt-1">
-                      {chap.summary}
-                    </p>
-                  </button>
-                );
-              })}
-            </div>
+          <div className="fixed inset-0 z-50 flex animate-fade-in">
+            {/* Backdrop click to dismiss */}
+            <div
+              className="fixed inset-0 bg-void/80 backdrop-blur-sm transition-opacity"
+              onClick={() => setIsSidebarOpen(false)}
+            />
 
-            {/* Canon Sources footer in TOC */}
-            <div className="p-4 border-t border-white/10 bg-void/40">
-              <span className="text-[10px] uppercase font-serif tracking-wider text-parchment/40 block mb-1.5 font-bold">
-                Archival Reference
-              </span>
-              <p className="text-[11px] font-sans text-parchment/60 leading-tight">
-                Adheres to official Moonton Hero Biographies & Imperial Masteries.
-              </p>
-            </div>
-          </aside>
+            {/* Slide-Out Drawer */}
+            <aside className="relative z-50 w-80 max-w-[85vw] bg-night border-r border-gold-500/30 flex flex-col h-full shadow-2xl animate-fade-in">
+              <div className="p-4 border-b border-white/10 flex items-center justify-between bg-card">
+                <div>
+                  <span className="text-[10px] uppercase font-serif tracking-widest text-gold-400 font-bold block">
+                    Table of Contents
+                  </span>
+                  <h3 className="font-serif text-sm font-bold text-ivory">
+                    {story.chapters.length} Chapters
+                  </h3>
+                </div>
+                <button
+                  onClick={() => setIsSidebarOpen(false)}
+                  className="p-1.5 rounded-lg bg-white/5 border border-white/10 hover:border-gold-400 text-parchment/60 hover:text-ivory"
+                  title="Close Table of Contents"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+
+              <div className="divide-y divide-white/5 flex-1 overflow-y-auto">
+                {story.chapters.map((chap, idx) => {
+                  const isActive = idx === activeChapterIndex;
+                  return (
+                    <button
+                      key={chap.chapter_id}
+                      onClick={() => {
+                        setActiveChapterIndex(idx);
+                        setIsSidebarOpen(false); // auto-close on selection
+                        contentRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}
+                      className={`w-full text-left p-4 transition-all duration-200 ${
+                        isActive
+                          ? 'bg-gold-500/15 border-l-4 border-gold-400 text-gold-300'
+                          : 'hover:bg-card text-parchment/70 hover:text-ivory'
+                      }`}
+                    >
+                      <div className="flex items-center justify-between text-[10px] uppercase tracking-wider mb-1 font-sans">
+                        <span className={isActive ? 'text-gold-400 font-bold' : 'text-parchment/40'}>
+                          Chapter 0{chap.sequence_number}
+                        </span>
+                        <span className="text-parchment/40">{chap.word_count} words</span>
+                      </div>
+                      <h5 className="font-serif text-xs sm:text-sm font-bold line-clamp-1">
+                        {chap.title}
+                      </h5>
+                      <p className="text-[11px] font-sans text-parchment/50 line-clamp-2 mt-1">
+                        {chap.summary}
+                      </p>
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Canon Sources footer in TOC */}
+              <div className="p-4 border-t border-white/10 bg-void/40">
+                <span className="text-[10px] uppercase font-serif tracking-wider text-parchment/40 block mb-1.5 font-bold">
+                  Archival Reference
+                </span>
+                <p className="text-[11px] font-sans text-parchment/60 leading-tight">
+                  Adheres strictly to official Moonton Hero Biographies & Imperial Masteries.
+                </p>
+              </div>
+            </aside>
+          </div>
         )}
+
+        {/* Floating Chapters pill button */}
+        <button
+          onClick={() => setIsSidebarOpen(true)}
+          className="fixed bottom-6 left-6 z-30 flex items-center gap-2 px-3.5 py-2 rounded-full bg-night/95 hover:bg-card border border-gold-500/40 text-gold-300 shadow-2xl backdrop-blur-md text-xs font-serif font-bold transition-all hover:scale-105 active:scale-95"
+          title="Open Table of Contents (Or swipe right from left edge)"
+        >
+          <List className="w-4 h-4 text-gold-400" />
+          <span>Chapters</span>
+          <span className="bg-gold-500/20 text-gold-300 px-1.5 py-0.5 rounded text-[10px]">
+            0{activeChapterIndex + 1}/0{story.chapters.length}
+          </span>
+        </button>
 
         {/* Central Reading Canvas */}
         <main

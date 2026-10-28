@@ -78,6 +78,7 @@ export const HeroCodex: React.FC<HeroCodexProps> = ({ heroes, onSelectHero }) =>
               <img
                 src={hero.backdropUrl}
                 alt=""
+                referrerPolicy="no-referrer"
                 className="w-full h-full object-cover object-center filter blur-[1px] scale-110 group-hover:scale-125 transition-transform duration-700"
                 onError={(e) => {
                   (e.target as HTMLElement).style.display = 'none';
@@ -92,6 +93,7 @@ export const HeroCodex: React.FC<HeroCodexProps> = ({ heroes, onSelectHero }) =>
                 <img
                   src={hero.avatarUrl}
                   alt={hero.canonical_name}
+                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover rounded-full group-hover:scale-110 transition-transform duration-500"
                   onError={(e) => {
                     (e.target as HTMLImageElement).src =

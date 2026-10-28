@@ -12,6 +12,7 @@ import {
 } from './data/loreAdapter';
 import { EnrichedStory, EnrichedHero } from './types/lore';
 import { Navbar } from './components/Navbar';
+import { BottomNav } from './components/BottomNav';
 import { HeroBillboard } from './components/HeroBillboard';
 import { StoryRow } from './components/StoryRow';
 import { ReadingPathSection } from './components/ReadingPathSection';
@@ -93,7 +94,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-void text-ivory flex flex-col font-sans selection:bg-gold-500/30 selection:text-gold-300">
+    <div className="min-h-screen bg-void text-ivory flex flex-col font-sans selection:bg-gold-500/30 selection:text-gold-300 pb-16 md:pb-0">
       {/* Top Fixed Navbar */}
       <Navbar
         onOpenSearch={() => setIsSearchOpen(true)}
@@ -102,6 +103,12 @@ export const App: React.FC = () => {
         onNavigate={handleNavigate}
         bookmarkedStoryIds={bookmarkedStoryIds}
         onOpenBookmarks={() => handleNavigate('stories')}
+      />
+
+      {/* Mobile Bottom Navigation Bar */}
+      <BottomNav
+        activeSection={activeSection}
+        onNavigate={handleNavigate}
       />
 
       {/* Hero Billboard (Netflix / Cinematic Style) */}

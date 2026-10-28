@@ -66,9 +66,15 @@ export const HeroModal: React.FC<HeroModalProps> = ({
           <img
             src={hero.splashUrl}
             alt={hero.canonical_name}
+            referrerPolicy="no-referrer"
             className="relative z-10 max-h-[460px] md:max-h-[520px] w-auto object-contain filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.9)] transition-transform duration-500 hover:scale-105"
             onError={(e) => {
-              (e.target as HTMLImageElement).src = hero.avatarUrl;
+              const img = e.target as HTMLImageElement;
+              if (img.src !== hero.avatarUrl) {
+                img.src = hero.avatarUrl;
+              } else {
+                img.style.display = 'none';
+              }
             }}
           />
 

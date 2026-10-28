@@ -156,49 +156,17 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
           )}
 
-          {/* Mobile menu trigger */}
+          {/* Canon Annals Button (Mobile & Desktop) */}
           <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg bg-card/60 border border-white/10 text-parchment/80 hover:text-ivory"
+            onClick={onOpenSources}
+            className="md:hidden text-xs uppercase tracking-wider text-parchment/70 hover:text-gold-400 transition-colors flex items-center gap-1 border border-white/10 px-2 py-1.5 rounded bg-card/60"
+            title="Imperial Canon Policy"
           >
-            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            <Scroll className="w-3.5 h-3.5 text-gold-400" />
+            <span className="text-[11px] font-serif">Canon</span>
           </button>
         </div>
       </div>
-
-      {/* Mobile Drawer Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-void/98 border-b border-gold-500/20 px-4 pt-4 pb-6 space-y-3 animate-fade-in">
-          {navLinks.map((link) => (
-            <button
-              key={link.id}
-              onClick={() => {
-                onNavigate(link.id);
-                setIsMobileMenuOpen(false);
-              }}
-              className={`block w-full text-left py-2 px-3 rounded text-sm font-medium ${
-                activeSection === link.id
-                  ? 'bg-gold-500/15 text-gold-300 border-l-2 border-gold-400'
-                  : 'text-parchment/80 hover:bg-white/5'
-              }`}
-            >
-              {link.label}
-            </button>
-          ))}
-          <div className="pt-2 border-t border-white/10 flex items-center justify-between">
-            <button
-              onClick={() => {
-                onOpenSources();
-                setIsMobileMenuOpen(false);
-              }}
-              className="text-xs text-gold-400 flex items-center gap-1.5 py-2"
-            >
-              <Scroll className="w-4 h-4" />
-              Imperial Canon & Sources
-            </button>
-          </div>
-        </div>
-      )}
     </header>
   );
 };

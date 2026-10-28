@@ -24,6 +24,7 @@ export const StoryCard: React.FC<StoryCardProps> = ({
         <img
           src={story.backdropUrl || story.coverArt}
           alt={story.title}
+          referrerPolicy="no-referrer"
           className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
           onError={(e) => {
             if (story.coverArt && (e.target as HTMLImageElement).src !== story.coverArt) {
